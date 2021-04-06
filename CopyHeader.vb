@@ -1,6 +1,6 @@
 Function copyHeader(sht As Worksheet, searchColumn As String, pasteTargetColumn As String, searchTextPattern As String)
 'Finds all text that contains as pattern in a given data column and pastes the found text in another column for all rows between the found text row and then next found text row
-'Input Sample - Find "Header" keyword
+'Data Input Sample - Find "Header" keyword
 'A   B
 '    Header1
 '    Data1
@@ -9,7 +9,7 @@ Function copyHeader(sht As Worksheet, searchColumn As String, pasteTargetColumn 
 '    Header2
 '    Data1
 
-'Output Sample
+'Data Output Sample
 'A          B
 '           Header1
 'Header1    Data1
