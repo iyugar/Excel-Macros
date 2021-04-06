@@ -1,4 +1,4 @@
-Function copyHeader(sht As Worksheet, searchColumn As String, pasteTargetColumn As String, searchTextPattern As String)
+Function copyHeader(sht As Worksheet, startRow As Integer, searchColumn As String, pasteTargetColumn As String, searchTextPattern As String)
 'Finds all text that contains as pattern in a given data column and pastes the found text in another column for all rows between the found text row and then next found text row
 'Data Input Sample - Find "Header" keyword
 'A   B
@@ -23,7 +23,7 @@ Dim pairsArr()
 Dim pair(1)
 counter = 0
 
-For r = 2 To shtLastRow
+For r = startRow To shtLastRow
     cellText = sht.Cells(r, searchColumn)
     If InStr(1, cellText, searchTextPattern) Then
     
